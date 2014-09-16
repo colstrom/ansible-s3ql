@@ -31,6 +31,6 @@
     state: mounted
     src: "s3://{{ s3ql_bucket_name }}"
     fstype: ext3
-    name: /data
+    name: "{{ s3ql_mountpoint }}"
   tags:
     - mount-volume
