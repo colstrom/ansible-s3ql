@@ -17,9 +17,9 @@
   template:
     src: "{{ item }}"
     dest: "/{{ item }}"
-    mode: 0440
+    mode: 0400
     owner: "{{ s3ql_user }}"
-    group: wcadmin
+    group: "{{ s3ql_group }}"
   with_items:
     - data/www/s3ql-authinfo
     - etc/init/s3ql.conf
