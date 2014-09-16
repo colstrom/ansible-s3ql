@@ -1,0 +1,4 @@
+---
+s3ql_path: /data/www/assets
+s3ql_owner: www-data
+s3ql_group: www-data
