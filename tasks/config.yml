@@ -21,7 +21,7 @@
     owner: "{{ s3ql_user }}"
     group: wcadmin
   with_items:
-    - data/www/sq3l-authinfo
+    - data/www/s3ql-authinfo
     - etc/init/s3ql.conf
   tags:
     - configuration
