@@ -1,6 +1,7 @@
 ---
 s3ql_mountpoint: /data/www/assets
-s3ql_owner: www-data
+s3ql_authinfo_path: /data/www/s3ql-authinfo
+s3ql_user: www-data
 s3ql_group: www-data
 s3ql_bucket_name: ''
 s3ql_access_key_id: ''

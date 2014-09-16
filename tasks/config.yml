@@ -9,7 +9,6 @@
     state: directory
     path: "{{ item }}"
   with_items:
-     - /root/.s3ql
      - "{{ s3ql_mountpoint }}"
   tags:
     - directory-structure
@@ -18,9 +17,11 @@
   template:
     src: "{{ item }}"
     dest: "/{{ item }}"
-    mode: 0600
+    mode: 0440
+    owner: "{{ s3ql_user }}"
+    group: wcadmin
   with_items:
-    - root/.s3ql/authinfo
+    - data/www/sq3l-authinfo
     - etc/init/s3ql.conf
   tags:
     - configuration

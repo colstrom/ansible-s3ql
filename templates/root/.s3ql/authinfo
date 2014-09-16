@@ -1,2 +1,0 @@
-backend s3 machine any login {{ s3ql_access_key_id }} password {{ s3ql_secret_access_key }}
-storage-url s3://{{ s3ql_bucket_name }} {% if s3ql_encryption_enabled %}password {{ s3ql_encryption_password }}{% endif %}
