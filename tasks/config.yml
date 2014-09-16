@@ -1,0 +1,36 @@
+---
+# - name: "Create ext4 filesystem on {{ instance_store_device }}"
+#   filesystem:
+#      dev: /dev/xvda2
+#      fstype: ext3
+
+- name: "Directories Exists"
+  file:
+    state: directory
+    path: "{{ item }}"
+  with_items:
+     - /root/.s3ql
+     - "{{ s3ql_mountpoint }}"
+  tags:
+    - directory-structure
+
+- name: "Upload Config"
+  template:
+    src: "{{ item }}"
+    dest: "/{{ item }}"
+    mode: 0600
+  with_items:
+    - root/.s3ql/authinfo
+    - etc/init/s3ql.conf
+  tags:
+    - configuration
+    - template-configuration
+
+- name: "Mount {{ s3ql_bucket_name }} to {{ s3ql_mountpoint }}"
+  mount:
+    state: mounted
+    src: "s3://{{ s3ql_bucket_name }}"
+    fstype: ext3
+    name: /data
+  tags:
+    - mount-volume

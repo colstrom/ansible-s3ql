@@ -1,4 +1,9 @@
 ---
-s3ql_path: /data/www/assets
+s3ql_mountpoint: /data/www/assets
 s3ql_owner: www-data
 s3ql_group: www-data
+s3ql_bucket_name: ''
+s3ql_access_key_id: ''
+s3ql_secret_access_key: ''
+s3ql_encryption_enabled: no
+s3ql_encryption_password: ''
