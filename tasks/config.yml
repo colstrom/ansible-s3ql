@@ -8,8 +8,12 @@
   file:
     state: directory
     path: "{{ item }}"
+    owner: "{{ s3ql_user }}"
+    group: "{{ s3ql_group }}"
+    mode: 0775
   with_items:
      - "{{ s3ql_mountpoint }}"
+     - "{{ s3ql_cache_path }}"
   tags:
     - directory-structure
 
