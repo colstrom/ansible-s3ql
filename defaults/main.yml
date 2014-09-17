@@ -1,4 +1,7 @@
 ---
+s3ql_log_root: "{{ log_root }}/s3ql"
+s3ql_log_path: "{{ s3_log_root }}/s3ql.log"
+
 s3ql_mountpoint: /data/www/assets
 s3ql_authinfo_path: /data/www/s3ql-authinfo
 s3ql_cache_path: /data/www/.s3ql
