@@ -1,7 +1,7 @@
 [s3]
 storage-url: s3://{{ s3ql_bucket_name }}
 backend-login: {{ s3ql_access_key_id }}
-backend-password: {{ s3ql_secret_access_key }}
+backend-password: '{{ s3ql_secret_access_key }}'
 {% if s3ql_encryption_enabled %}
 fs-password {{ s3ql_encryption_password }}
 {% endif %}
