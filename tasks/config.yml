@@ -37,10 +37,8 @@
   ignore_errors: True
 
 - name: "Mount {{ s3ql_bucket_name }} to {{ s3ql_mountpoint }}"
-  mount:
-    state: mounted
-    src: "s3://{{ s3ql_bucket_name }}"
-    fstype: s3ql
-    name: "{{ s3ql_mountpoint }}"
+  service:
+    name: s3ql
+    state: started
   tags:
     - mount-volume
