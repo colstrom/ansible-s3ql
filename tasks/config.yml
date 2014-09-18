@@ -12,7 +12,6 @@
     group: "{{ s3ql_group }}"
     mode: 0775
   with_items:
-     - "{{ s3ql_mountpoint }}"
      - "{{ s3ql_cache_path }}"
      - "{{ s3ql_log_root }}"
   tags:
