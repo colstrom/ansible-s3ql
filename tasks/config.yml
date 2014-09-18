@@ -17,6 +17,17 @@
   tags:
     - directory-structure
 
+- name: "Directory Exists {{ s3ql_mountpoint }}"
+  file:
+    state: directory
+    path: "{{ s3ql_mountpoint }}"
+    owner: "{{ s3ql_user }}"
+    group: "{{ s3ql_group }}"
+    mode: 0775
+  ignore_errors: True
+  tags:
+    - directory-structure
+
 - name: "Upload Config"
   template:
     src: "{{ item }}"
