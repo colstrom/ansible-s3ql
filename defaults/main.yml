@@ -5,7 +5,7 @@ s3ql_log_path: "{{ s3ql_log_root }}/s3ql.log"
 s3ql_mountpoint: /data/www/assets
 s3ql_authinfo_path: /data/www/s3ql-authinfo
 s3ql_cache_path: /data/www/.s3ql
-s3ql_user: www-data
+s3ql_user: root
 s3ql_group: www-data
 s3ql_bucket_name: "assets-{{ project }}-{{ environment_tier }}-teluswebteam-com"
 s3ql_access_key_id: ''
