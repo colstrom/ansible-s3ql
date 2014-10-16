@@ -21,7 +21,7 @@
   lineinfile:
     state: present
     dest: /etc/fuse.conf
-    regexp: '#?user_allow_other'
+    regexp: '^#?user_allow_other'
     line: user_allow_other
   tags:
     - configuration
