@@ -3,3 +3,6 @@ dependencies:
   - role: meta/repository
     repository_key: '0x3020c5209958c967'
     repository_url: 'deb http://ppa.launchpad.net/nikratio/s3ql/ubuntu trusty main'
+
+  - role: package/logrotate
+    logrotate_name: s3ql
