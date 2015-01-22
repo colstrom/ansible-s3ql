@@ -1,5 +1,5 @@
 ---
-s3ql_log_root: "{{ log_root }}/s3ql"
+s3ql_log_root: "{{ log_root | default('/var/log') }}/s3ql"
 s3ql_log_path: "{{ s3ql_log_root }}/s3ql.log"
 
 s3ql_mountpoint: /data/www/assets
