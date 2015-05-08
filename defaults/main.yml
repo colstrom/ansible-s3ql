@@ -7,7 +7,7 @@ s3ql_authinfo_path: /data/www/s3ql-authinfo
 s3ql_cache_path: /data/www/.s3ql
 s3ql_user: root
 s3ql_group: www-data
-s3ql_bucket_name: "assets-{{ project }}-{{ environment_tier }}-teluswebteam-com"
+s3ql_bucket_name: ""
 s3ql_access_key_id: ''
 s3ql_secret_access_key: ''
 s3ql_encryption_enabled: no
